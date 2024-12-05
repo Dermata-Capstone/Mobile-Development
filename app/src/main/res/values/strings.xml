@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Dermata</string>
+    <string name="register_page">REGISTER PAGE</string>
+    <string name="login_text">Sudah punya akun? Login</string>
+    <string name="article_name">Title\n</string>
+    <string name="description">Description</string>
 </resources>

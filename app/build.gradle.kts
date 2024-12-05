@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.dicoding.dermata"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.dicoding.dermata"
@@ -26,6 +26,12 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        buildConfig = true
+        viewBinding = true
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -45,4 +51,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation (libs.androidx.fragment.ktx)
 }
