@@ -45,6 +45,7 @@
         android:background="?attr/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/menu"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
