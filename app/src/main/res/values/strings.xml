@@ -6,4 +6,7 @@
     <string name="description">Description</string>
     <string name="login">LOGIN PAGE</string>
     <string name="dermata">DERMATA</string>
+    <string name="aichat">Aichat</string>
+    <string name="camera">Camera</string>
+    <string name="profile">Profile</string>
 </resources>

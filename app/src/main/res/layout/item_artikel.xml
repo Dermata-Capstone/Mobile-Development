@@ -18,12 +18,6 @@
         android:layout_height="wrap_content"
         android:padding="8dp">
 
-        <!-- Title di kiri atas -->
-
-        <!-- Deskripsi di bawah title -->
-
-        <!-- Gambar di sebelah kanan -->
-
         <TextView
             android:id="@+id/tv_item_name"
             android:layout_width="294dp"
