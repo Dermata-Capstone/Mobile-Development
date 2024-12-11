@@ -2,16 +2,24 @@
     <string name="app_name">Dermata</string>
     <string name="register_page">REGISTER PAGE</string>
     <string name="login_text">Sudah punya akun? Login</string>
-    <string name="article_name">Title\n</string>
+    <string name="article_name">Title</string>
     <string name="description">Description</string>
     <string name="login">LOGIN PAGE</string>
     <string name="dermata">DERMATA</string>
     <string name="aichat">Aichat</string>
     <string name="camera">Camera</string>
     <string name="profile">Profile</string>
-    <string name="retake_camera">cancel</string>
-    <string name="confirm">confirm\n</string>
+    <string name="retake_camera">Cancel</string>
+    <string name="confirm">confirm</string>
     <string name="reset_password">RESET PASSWORD</string>
     <string name="new_password">New Password</string>
     <string name="enter_code">Enter Code</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="belum_punya_akun_register">Belum punya akun? Register</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sudah_punya_akun_login">Sudah punya akun? Login</string>
+    <string name="submit">Submit</string>
+    <string name="welcome">Welcome</string>
 </resources>

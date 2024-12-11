@@ -1,4 +1,4 @@
-package com.dicoding.dermata.RegisterPage
+package com.dicoding.dermata.ui.RegisterPage
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,7 @@ import com.dicoding.dermata.R
 import com.dicoding.dermata.api.ApiClient
 import com.dicoding.dermata.api.ApiService
 import com.dicoding.dermata.response.RegisterResponse
-import com.dicoding.dermata.LoginPage.LoginActivity
+import com.dicoding.dermata.ui.LoginPage.LoginActivity
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call

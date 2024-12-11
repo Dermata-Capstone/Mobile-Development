@@ -2,4 +2,6 @@
     <color name="colorPrimary">#203C7E</color>
     <color name="colorPrimaryDark">#182E5E</color>
     <color name="colorAccent">#4F6FA3</color>
+    <color name="black">#000000</color>
+    <color name="gray">#F0F0F0</color>
 </resources>
