@@ -2,6 +2,7 @@ package com.dicoding.dermata.api
 
 
 import com.dicoding.dermata.response.ArticleResponse
+import com.dicoding.dermata.response.FileUploadResponse
 import com.dicoding.dermata.response.LoginResponse
 import com.dicoding.dermata.response.ProfileResponse
 import com.dicoding.dermata.response.RegisterResponse
@@ -32,5 +33,10 @@ interface ApiService {
     @GET("home/Pita")
     fun getArticles(): Call<ArticleResponse>
 
+    @Multipart
+    @POST("predict")
+    suspend fun uploadImage(
+        @Part file: MultipartBody.Part
+    ): FileUploadResponse
 
 }

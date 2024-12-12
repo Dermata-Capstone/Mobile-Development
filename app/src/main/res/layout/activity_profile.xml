@@ -33,11 +33,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:minHeight="48dp"
+            android:onClick="onChangeProfilePictureClick"
             android:text="@string/change_picture"
             android:textColor="@color/colorAccent"
-            android:textStyle="bold"
-            android:clickable="true"
-            android:onClick="onChangeProfilePictureClick" />
+            android:textStyle="bold" />
 
         <!-- Username Field -->
         <com.google.android.material.textfield.TextInputLayout

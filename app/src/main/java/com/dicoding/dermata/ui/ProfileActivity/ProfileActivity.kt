@@ -36,7 +36,7 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profile)
 
         val token = intent.getStringExtra("token") ?: return
-        apiService = ApiClient.apiService
+        apiService = ApiClient.getSecondApiService()
 
         ivProfile = findViewById(R.id.ivProfile)
         editUsername = findViewById(R.id.edit_username)

@@ -1,19 +1,30 @@
 package com.dicoding.dermata.api
 
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
-    private const val BASE_URL = "https://dermata-444204.et.r.appspot.com/"
-
-    private val retrofit: Retrofit by lazy {
-        Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
+    fun getFirstApiService(): ApiService {
+        val loggingInterceptor = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+        val client = OkHttpClient.Builder()
+            .addInterceptor(loggingInterceptor)
             .build()
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://dermata-api-975353269699.asia-southeast2.run.app/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .client(client)
+            .build()
+        return retrofit.create(ApiService::class.java)
     }
 
-    val apiService: ApiService by lazy {
-        retrofit.create(ApiService::class.java)
+    // API untuk dermata-444204.et.r.appspot.com
+    fun getSecondApiService(): ApiService {
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://dermata-444204.et.r.appspot.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+        return retrofit.create(ApiService::class.java)
     }
 }

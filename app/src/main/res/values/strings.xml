@@ -22,9 +22,78 @@
     <string name="sudah_punya_akun_login">Sudah punya akun? Login</string>
     <string name="submit">Submit</string>
     <string name="welcome">Welcome</string>
+    <string name="camera_x">CameraX</string>
+    <string name="gallery">Galeri</string>
+    <string name="upload">Unggah</string>
+    <string name="empty_image_warning">Silakan masukkan berkas gambar terlebih dahulu.</string>
+    <string name="result_format">Prediction: %1$s, Confidence: %.2f%%</string>
+
+    <string name="recommendation_normal_skin">
+        Kulit normal biasanya seimbang dan tidak terlalu berminyak atau kering. <br>
+        Rekomendasi: Gunakan produk yang mengandung hyaluronic acid, glycerin,
+        dan ceramide untuk menjaga hidrasi dan melindungi kulit dari polusi.</br>
+    </string>
+
+    <string name="recommendation_oily_skin">
+        Kulit berminyak cenderung menghasilkan sebum berlebih, yang dapat menyebabkan pori-pori tersumbat.<br>
+        Rekomendasi: Pilih skincare dengan salicylic acid untuk membersihkan pori-pori,
+        niacinamide untuk mengontrol produksi minyak, dan clay mask untuk perawatan mingguan.</br>
+    </string>
+
+    <string name="recommendation_dry_skin">
+        Kulit kering sering terasa kasar dan kurang elastis.
+        Rekomendasi: Gunakan produk dengan kandungan shea butter, squalane, dan urea untuk memberikan hidrasi intensif,
+        serta hindari sabun berbasis sulfat yang bisa menghilangkan minyak alami kulit.
+    </string>
+
+    <string name="recommendation_acne_skin">
+        Kulit berjerawat rentan terhadap peradangan dan bakteri.
+        Rekomendasi: Gunakan produk dengan benzoyl peroxide untuk membunuh bakteri, tea tree oil sebagai anti-inflamasi,
+        dan salicylic acid untuk mencegah pori tersumbat.
+    </string>
+
+    <string name="recommendation_blackheads">
+        Komedo sering muncul akibat pori-pori tersumbat oleh minyak dan sel kulit mati.
+        Rekomendasi: Gunakan exfoliant dengan salicylic acid untuk mengangkat sel kulit mati,
+        retinoid untuk mempercepat regenerasi kulit, dan strip khusus komedo untuk hasil instan.
+    </string>
+
+    <string name="recommendation_dark_circles">
+        Kantung mata atau lingkaran gelap dapat disebabkan oleh kelelahan, usia, atau faktor genetik.
+        Rekomendasi: Gunakan produk yang mengandung vitamin C untuk mencerahkan kulit,
+        niacinamide untuk mengurangi pigmentasi, dan kafein untuk mengurangi bengkak.
+    </string>
+
+    <string name="recommendation_large_pores">
+        Pori-pori besar dapat terjadi karena produksi minyak berlebih atau elastisitas kulit yang menurun.
+        Rekomendasi: Gunakan niacinamide untuk mengecilkan tampilan pori, retinol untuk meningkatkan tekstur kulit,
+        dan masker tanah liat untuk membersihkan pori.
+    </string>
+
+    <string name="recommendation_skin_redness">
+        Kulit kemerahan sering terjadi karena iritasi atau kondisi sensitif.
+        Rekomendasi: Gunakan produk dengan centella asiatica untuk menenangkan kulit,
+        aloe vera untuk hidrasi, dan green tea sebagai antioksidan.
+    </string>
+
+    <string name="recommendation_wrinkles">
+        Keriput muncul karena penurunan produksi kolagen seiring usia.
+        Rekomendasi: Gunakan produk dengan retinol untuk memperbaiki elastisitas kulit, peptides untuk mengencangkan,
+        dan vitamin C untuk melindungi dari radikal bebas.
+    </string>
+
+    <string name="recommendation_dark_spots">
+        Flek hitam dapat disebabkan oleh paparan sinar matahari atau bekas jerawat.
+        Rekomendasi: Gunakan produk dengan alpha arbutin untuk menghambat produksi melanin, vitamin C untuk mencerahkan,
+        dan sunscreen untuk mencegah kerusakan lebih lanjut.
+    </string>
+
+    <string name="recommendation_default">
+        Rekomendasi tidak tersedia untuk jenis kulit ini. Silakan konsultasikan dengan dermatologis untuk saran lebih spesifik.
+    </string>
+    <string name="change_picture">Ganti Foto Profil</string>
     <string name="save">Save</string>
-    <string name="profile_picture">Photo Profile\n</string>
-    <string name="change_picture">Photo Profile</string>
-    <string name="coming_soon_icon">Coming Soon</string>
-    <string name="article">Trending Article</string>
+    <string name="profile_picture">Profile Picture\n</string>
+    <string name="coming_soon_icon">Coming Soon\n</string>
+    <string name="article">Article\n</string>
 </resources>

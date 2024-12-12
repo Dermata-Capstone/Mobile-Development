@@ -30,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
 
         // Inisialisasi SharedPrefManager dan ApiService
         sharedPrefManager = SharedPrefManager(this)
-        apiService = ApiClient.apiService
+        apiService = ApiClient.getSecondApiService()
 
         findViewById<Button>(R.id.btn_login).setOnClickListener {
             val email = findViewById<EditText>(R.id.edit_email).text.toString()

@@ -17,6 +17,7 @@ import com.dicoding.dermata.R
 import com.dicoding.dermata.api.ApiClient
 import com.dicoding.dermata.ui.LoginPage.LoginActivity
 import com.dicoding.dermata.ui.ComingSoonPage.ComingSoonActivity
+import com.dicoding.dermata.ui.main.AnalysisActivity
 import com.dicoding.dermata.utils.ArticleAdapter
 import com.dicoding.dermata.utils.SharedPrefManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -73,7 +74,7 @@ class MainActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 Log.d("MainActivity", "Starting API request for articles")
-                val response = ApiClient.apiService.getArticles().execute() // Panggilan sinkron
+                val response = ApiClient.getSecondApiService().getArticles().execute() // Panggilan sinkron
                 if (response.isSuccessful) {
                     val articleResponse = response.body() // Mendapatkan ArticleResponse
                     val websites = articleResponse?.websites ?: emptyList() // Akses field 'websites'
@@ -132,6 +133,12 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             Log.d("MainActivity", "Menu item selected: ${menuItem.itemId}")  // Log saat menu item dipilih
             when (menuItem.itemId) {
+                R.id.menu_camera -> {
+                    Log.d("MainActivity", "Camera button clicked, redirecting to AnalysisActivity")
+                    startActivity(Intent(this, AnalysisActivity::class.java))
+                    overridePendingTransition(0, 0)
+                    true
+                }
                 R.id.menu_profile, R.id.menu_aichat -> {
                     Log.d("MainActivity", "Redirecting to ComingSoonActivity")  // Log saat membuka ComingSoonActivity
                     startActivity(Intent(this, ComingSoonActivity::class.java))
