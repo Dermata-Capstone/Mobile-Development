@@ -8,6 +8,7 @@
 
         <!-- Customize your dark theme here -->
         <item name="colorSecondary">@color/colorAccent</item>
+
     </style>
 
     <style name="Theme.Dermata" parent="Base.Theme.Dermata" />

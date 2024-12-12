@@ -1,5 +1,7 @@
 package com.dicoding.dermata.api
 
+
+import com.dicoding.dermata.response.ArticleResponse
 import com.dicoding.dermata.response.LoginResponse
 import com.dicoding.dermata.response.ProfileResponse
 import com.dicoding.dermata.response.RegisterResponse
@@ -24,6 +26,11 @@ interface ApiService {
     fun updateProfile(
         @Header("Authorization") token: String,
         @Part("username") username: RequestBody,
-        @Part fotoProfil: MultipartBody.Part
+        @Part fotoProfil: MultipartBody.Part?
     ): Call<Void>
+
+    @GET("home/Pita")
+    fun getArticles(): Call<ArticleResponse>
+
+
 }

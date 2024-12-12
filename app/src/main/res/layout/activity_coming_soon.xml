@@ -1,0 +1,49 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Coming Soon Text -->
+    <TextView
+        android:id="@+id/tvComingSoon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fitur Ini Akan Segera Hadir!"
+        android:textSize="24sp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Image Icon (optional) -->
+    <ImageView
+        android:id="@+id/ivComingSoon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_coming_soon"
+        android:contentDescription="@string/coming_soon_icon"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Additional Message -->
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kami sedang mengembangkan fitur ini. Terima kasih atas kesabarannya!"
+        android:textSize="16sp"
+        android:textColor="#888888"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"/>
+
+    <!-- Button to Go Back or Close -->
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kembali"
+        android:layout_marginTop="16dp"
+        android:onClick="onCloseButtonClick"/>
+</LinearLayout>

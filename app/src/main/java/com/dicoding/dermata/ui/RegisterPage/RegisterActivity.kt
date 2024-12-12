@@ -22,7 +22,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        apiService = ApiClient.instance.create(ApiService::class.java)
+        apiService = ApiClient.apiService
 
         val usernameField = findViewById<TextInputEditText>(R.id.edit_username)
         val emailField = findViewById<TextInputEditText>(R.id.edit_email)

@@ -13,7 +13,6 @@ import com.dicoding.dermata.api.ApiClient
 import com.dicoding.dermata.api.ApiService
 import com.dicoding.dermata.response.LoginResponse
 import com.dicoding.dermata.ui.MainActivity
-import com.dicoding.dermata.ui.ProfileActivity
 import com.dicoding.dermata.ui.RegisterPage.RegisterActivity
 import com.dicoding.dermata.utils.SharedPrefManager
 import retrofit2.Call
@@ -31,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
 
         // Inisialisasi SharedPrefManager dan ApiService
         sharedPrefManager = SharedPrefManager(this)
-        apiService = ApiClient.instance.create(ApiService::class.java)
+        apiService = ApiClient.apiService
 
         findViewById<Button>(R.id.btn_login).setOnClickListener {
             val email = findViewById<EditText>(R.id.edit_email).text.toString()

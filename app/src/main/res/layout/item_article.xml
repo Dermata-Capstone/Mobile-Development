@@ -19,34 +19,21 @@
         android:padding="8dp">
 
         <TextView
-            android:id="@+id/tv_item_name"
-            android:layout_width="294dp"
-            android:layout_height="38dp"
+            android:id="@+id/titleTextView"
+            android:layout_width="247dp"
+            android:layout_height="39dp"
             android:layout_marginEnd="8dp"
             android:textSize="16sp"
             android:textStyle="bold"
-            card_view:layout_constraintEnd_toStartOf="@id/img_item_photo"
+            card_view:layout_constraintEnd_toStartOf="@id/imageView"
             card_view:layout_constraintHorizontal_bias="0.0"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
             tools:text="@string/article_name" />
 
-        <TextView
-            android:id="@+id/tv_item_description"
-            android:layout_width="294dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="8dp"
-            android:ellipsize="end"
-            android:maxLines="5"
-            card_view:layout_constraintEnd_toStartOf="@id/img_item_photo"
-            card_view:layout_constraintHorizontal_bias="0.0"
-
-            card_view:layout_constraintStart_toStartOf="@id/tv_item_name"
-            card_view:layout_constraintTop_toBottomOf="@id/tv_item_name"
-            tools:text="@string/description" />
 
         <ImageView
-            android:id="@+id/img_item_photo"
+            android:id="@+id/imageView"
             android:layout_width="113dp"
             android:layout_height="96dp"
             android:layout_marginEnd="8dp"

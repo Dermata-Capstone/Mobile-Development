@@ -22,4 +22,9 @@
     <string name="sudah_punya_akun_login">Sudah punya akun? Login</string>
     <string name="submit">Submit</string>
     <string name="welcome">Welcome</string>
+    <string name="save">Save</string>
+    <string name="profile_picture">Photo Profile\n</string>
+    <string name="change_picture">Photo Profile</string>
+    <string name="coming_soon_icon">Coming Soon</string>
+    <string name="article">Trending Article</string>
 </resources>
