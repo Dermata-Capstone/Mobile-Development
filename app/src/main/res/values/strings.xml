@@ -24,7 +24,7 @@
     <string name="welcome">Welcome</string>
     <string name="camera_x">CameraX</string>
     <string name="gallery">Galeri</string>
-    <string name="upload">Unggah</string>
+    <string name="Scan">Scan</string>
     <string name="empty_image_warning">Silakan masukkan berkas gambar terlebih dahulu.</string>
     <string name="result_format">Prediction: %1$s, Confidence: %.2f%%</string>
 
@@ -96,4 +96,6 @@
     <string name="profile_picture">Profile Picture\n</string>
     <string name="coming_soon_icon">Coming Soon\n</string>
     <string name="article">Article\n</string>
+    <string name="home">Home</string>
+    <string name="rekomendasi_skincare">Recommended Skincare Ingredients</string>
 </resources>

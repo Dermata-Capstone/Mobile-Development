@@ -19,7 +19,7 @@ object ApiClient {
         return retrofit.create(ApiService::class.java)
     }
 
-    // API untuk dermata-444204.et.r.appspot.com
+
     fun getSecondApiService(): ApiService {
         val retrofit = Retrofit.Builder()
             .baseUrl("https://dermata-444204.et.r.appspot.com/")

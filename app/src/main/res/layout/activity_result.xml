@@ -4,7 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".ResultActivity">
+    tools:context=".ui.CameraActivity.ResultActivity">
+
+    <ImageView
+        android:id="@+id/resultImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"
+        android:layout_margin="16dp" />
 
     <TextView
         android:id="@+id/resultTextView"
@@ -12,16 +19,19 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:gravity="center"
+        android:fontFamily="@font/montserrat_bold"
         android:text="Prediction Result"
         android:padding="16dp" />
+
     <TextView
         android:id="@+id/recommendationTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_blue_background"
         android:textSize="16sp"
-        android:text="Rekomendasi Skincare"
-        android:textColor="@android:color/black" />
-
-
+        android:padding="12dp"
+        android:text="@string/rekomendasi_skincare"
+        android:textColor="@android:color/white" />
 </LinearLayout>
+

@@ -1,4 +1,4 @@
-package com.dicoding.dermata.ui.main
+package com.dicoding.dermata.ui.CameraActivity
 
 import android.Manifest
 import android.content.Intent
@@ -17,11 +17,15 @@ import androidx.lifecycle.lifecycleScope
 import com.dicoding.dermata.R
 import com.dicoding.dermata.api.ApiClient
 import com.dicoding.dermata.databinding.ActivityAnalysisBinding
+import com.dicoding.dermata.ui.ComingSoonPage.ComingSoonActivity
+import com.dicoding.dermata.ui.MainActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.launch
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import retrofit2.HttpException
+
 class AnalysisActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAnalysisBinding
@@ -33,8 +37,7 @@ class AnalysisActivity : AppCompatActivity() {
             permissions.entries.forEach { entry ->
                 if (!entry.value) {
                     if (!permissionsDeniedOnce) {
-                        Toast.makeText(this, "Permission ${entry.key} denied", Toast.LENGTH_SHORT).show()
-                        permissionsDeniedOnce = true // Set flag agar hanya muncul sekali
+                        permissionsDeniedOnce = true
                     }
                 }
             }
@@ -44,7 +47,9 @@ class AnalysisActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAnalysisBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupBottomNavigation()
 
+        // Meminta izin jika belum diberikan
         if (!allPermissionsGranted()) {
             requestPermissionLauncher.launch(arrayOf(REQUIRED_PERMISSION, Manifest.permission.READ_EXTERNAL_STORAGE))
         }
@@ -119,6 +124,7 @@ class AnalysisActivity : AppCompatActivity() {
                     val intent = Intent(this@AnalysisActivity, ResultActivity::class.java).apply {
                         putExtra(ResultActivity.EXTRA_PREDICTION, response.prediction)
                         putExtra(ResultActivity.EXTRA_CONFIDENCE, response.confidence)
+                        putExtra(ResultActivity.EXTRA_IMAGE_URI, currentImageUri.toString())
                     }
                     startActivity(intent)
 
@@ -144,5 +150,38 @@ class AnalysisActivity : AppCompatActivity() {
 
     companion object {
         private const val REQUIRED_PERMISSION = Manifest.permission.CAMERA
+    }
+
+    private fun setupBottomNavigation() {
+        Log.d("MainActivity", "Setting up bottom navigation")
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView.setOnItemSelectedListener { menuItem ->
+            Log.d("MainActivity", "Menu item selected: ${menuItem.itemId}")
+            when (menuItem.itemId) {
+                R.id.menu_camera -> {
+                    if (this !is AnalysisActivity) {
+                        Log.d("MainActivity", "Camera button clicked, redirecting to AnalysisActivity")
+                        startActivity(Intent(this, AnalysisActivity::class.java))
+                        overridePendingTransition(0, 0)
+                    }
+                    true
+                }
+                R.id.menu_profile, R.id.menu_aichat -> {
+                    Log.d("MainActivity", "Redirecting to ComingSoonActivity")
+                    startActivity(Intent(this, ComingSoonActivity::class.java))
+                    overridePendingTransition(0, 0)
+                    true
+                }
+                R.id.menu_home -> {
+                    Log.d("MainActivity", "Redirecting to MainActivity")
+                    startActivity(Intent(this, MainActivity::class.java))
+                    overridePendingTransition(0, 0)
+                    true
+                }
+                else -> false
+            }
+        }
+        bottomNavigationView.selectedItemId = R.id.menu_camera
+        Log.d("MainActivity", "Bottom navigation set to 'main'")
     }
 }

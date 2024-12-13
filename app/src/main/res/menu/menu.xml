@@ -2,12 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <item
+        android:id="@+id/menu_home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="ifRoom" />
     <!-- Menu Item: Aichat -->
     <item
         android:id="@+id/menu_aichat"
         android:title="@string/aichat"
         android:icon="@drawable/ic_forum"
         app:showAsAction="ifRoom" />
+
 
     <!-- Menu Item: Camera -->
     <item

@@ -1,4 +1,4 @@
-package com.dicoding.dermata.ui.main
+package com.dicoding.dermata.ui.CameraActivity
 
 import android.content.Intent
 import android.os.Build
@@ -16,7 +16,10 @@ import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
+import com.dicoding.dermata.R
 import com.dicoding.dermata.databinding.ActivityCameraBinding
+import com.dicoding.dermata.ui.ComingSoonPage.ComingSoonActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraBinding

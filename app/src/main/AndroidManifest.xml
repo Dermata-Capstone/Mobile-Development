@@ -7,7 +7,8 @@
         android:maxSdkVersion="28" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
+        android:maxSdkVersion="32"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -26,10 +27,11 @@
             android:exported="false" />
         <activity android:name=".ui.ProfileActivity.ProfileActivity"/>
         <activity
-            android:name=".ui.main.CameraActivity"
+            android:name=".ui.CameraActivity.CameraActivity"
             android:exported="false"/>
-        <activity android:name=".ui.main.AnalysisActivity" />
-        <activity android:name=".ui.main.ResultActivity" />
+        <activity android:name=".ui.CameraActivity.AnalysisActivity" />
+        <activity android:name=".ui.CameraActivity.ResultActivity" />
+        <activity android:name=".ui.ComingSoonPage.ComingSoonActivity" />
 
         <activity
             android:name=".ui.MainActivity"

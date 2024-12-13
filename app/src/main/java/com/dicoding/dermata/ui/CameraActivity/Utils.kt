@@ -1,4 +1,4 @@
-package com.dicoding.dermata.ui.main
+package com.dicoding.dermata.ui.CameraActivity
 
 import android.content.ContentValues
 import android.content.Context
