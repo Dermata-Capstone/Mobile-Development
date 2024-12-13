@@ -19,7 +19,7 @@ class ComingSoonActivity : AppCompatActivity() {
         btnClose.setOnClickListener {
             // Close the current activity or navigate elsewhere
             finish()  // Will finish the activity and go back to previous screen
-            Toast.makeText(this, "Kembali ke HomePage", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
         }
     }
 }

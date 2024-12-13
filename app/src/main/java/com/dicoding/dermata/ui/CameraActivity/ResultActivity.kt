@@ -9,6 +9,7 @@ import com.bumptech.glide.Glide
 import com.dicoding.dermata.R
 import com.dicoding.dermata.databinding.ActivityResultBinding
 import com.dicoding.dermata.ui.ComingSoonPage.ComingSoonActivity
+import com.dicoding.dermata.ui.MainActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ResultActivity : AppCompatActivity() {
@@ -18,8 +19,9 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView.selectedItemId = R.id.menu_camera
         setupBottomNavigation()
-
         // Ambil data dari Intent
         val prediction = intent.getStringExtra(EXTRA_PREDICTION)
         val confidence = intent.getDoubleExtra(EXTRA_CONFIDENCE, 0.0)
@@ -86,16 +88,14 @@ class ResultActivity : AppCompatActivity() {
                     overridePendingTransition(0, 0)
                     true
                 }
-                R.id.menu_aichat -> {
-                    Log.d("MainActivity", "Redirecting to ComingSoonActivity")  // Log saat membuka ComingSoonActivity
-                    startActivity(Intent(this, ComingSoonActivity::class.java))
+                R.id.menu_home -> {
+                    Log.d("MainActivity", "Redirecting to MainActivity")  // Log saat membuka ComingSoonActivity
+                    startActivity(Intent(this, MainActivity::class.java))
                     overridePendingTransition(0, 0)
                     true
                 }
                 else -> false
             }
         }
-        bottomNavigationView.selectedItemId = R.id.menu_camera
-        Log.d("MainActivity", "Bottom navigation set to 'main'")  // Log saat bottom navigation diset
     }
 }

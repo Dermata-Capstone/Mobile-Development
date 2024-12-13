@@ -58,6 +58,9 @@ class AnalysisActivity : AppCompatActivity() {
         binding.cameraButton.setOnClickListener { startCamera() }
         binding.cameraXButton.setOnClickListener { startCameraX() }
         binding.uploadButton.setOnClickListener { uploadImage() }
+
+        // Disable scan button initially until an image is selected
+        binding.uploadButton.isEnabled = currentImageUri != null
     }
 
     private fun allPermissionsGranted() =
@@ -72,6 +75,7 @@ class AnalysisActivity : AppCompatActivity() {
         if (uri != null) {
             currentImageUri = uri
             showImage()
+            binding.uploadButton.isEnabled = true // Enable scan button after selecting image
         } else {
             Log.d("Photo Picker", "No media selected")
         }
@@ -86,6 +90,7 @@ class AnalysisActivity : AppCompatActivity() {
     private val launcherIntentCamera = registerForActivityResult(ActivityResultContracts.TakePicture()) { isSuccess ->
         if (isSuccess) {
             showImage()
+            binding.uploadButton.isEnabled = true // Enable scan button after taking picture
         }
     }
 
@@ -98,6 +103,7 @@ class AnalysisActivity : AppCompatActivity() {
         if (it.resultCode == CameraActivity.CAMERAX_RESULT) {
             currentImageUri = it.data?.getStringExtra(CameraActivity.EXTRA_CAMERAX_IMAGE)?.toUri()
             showImage()
+            binding.uploadButton.isEnabled = true // Enable scan button after selecting image
         }
     }
 
@@ -138,6 +144,20 @@ class AnalysisActivity : AppCompatActivity() {
                 }
             }
         } ?: showToast(getString(R.string.empty_image_warning))
+    }
+
+    private fun startScan() {
+        // Ensure image is selected before scanning
+        if (currentImageUri != null) {
+            // Proceed with the scan using the selected image URI
+            Log.d("AnalysisActivity", "Starting scan with image: $currentImageUri")
+            // Proceed with scanning logic (e.g., start a new activity)
+            val intent = Intent(this, ResultActivity::class.java)
+            intent.putExtra("imageUri", currentImageUri.toString())
+            startActivity(intent)
+        } else {
+            showToast("Please select an image first to scan.")
+        }
     }
 
     private fun showLoading(isLoading: Boolean) {
