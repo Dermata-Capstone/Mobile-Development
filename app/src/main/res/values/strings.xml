@@ -106,4 +106,6 @@
     <string name="article">Article\n</string>
     <string name="home">Home</string>
     <string name="rekomendasi_skincare">Recommended Skincare Ingredients</string>
+    <string name="skin_analysis">Skin Analysis</string>
+    <string name="Logout">Are you sure you want to logout?</string>
 </resources>

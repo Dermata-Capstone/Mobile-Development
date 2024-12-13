@@ -202,6 +202,5 @@ class AnalysisActivity : AppCompatActivity() {
             }
         }
         bottomNavigationView.selectedItemId = R.id.menu_camera
-        Log.d("MainActivity", "Bottom navigation set to 'main'")
     }
 }

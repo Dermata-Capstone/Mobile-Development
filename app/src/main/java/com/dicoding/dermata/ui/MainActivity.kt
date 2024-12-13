@@ -18,6 +18,7 @@ import com.dicoding.dermata.api.ApiClient
 import com.dicoding.dermata.ui.LoginPage.LoginActivity
 import com.dicoding.dermata.ui.ComingSoonPage.ComingSoonActivity
 import com.dicoding.dermata.ui.CameraActivity.AnalysisActivity
+import com.dicoding.dermata.ui.ProfileActivity.ProfileActivity
 import com.dicoding.dermata.utils.ArticleAdapter
 import com.dicoding.dermata.utils.SharedPrefManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -140,9 +141,9 @@ class MainActivity : AppCompatActivity() {
                     overridePendingTransition(0, 0)
                     true
                 }
-                R.id.menu_profile, R.id.menu_aichat -> {
-                    Log.d("MainActivity", "Redirecting to ComingSoonActivity")  // Log saat membuka ComingSoonActivity
-                    startActivity(Intent(this, ComingSoonActivity::class.java))
+                R.id.menu_profile -> {
+                    Log.d("MainActivity", "Redirecting to LogoutActivity")  // Log saat membuka ComingSoonActivity
+                    startActivity(Intent(this,ProfileActivity::class.java))
                     overridePendingTransition(0, 0)
                     true
                 }
