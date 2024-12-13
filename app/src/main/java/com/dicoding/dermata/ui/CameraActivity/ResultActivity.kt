@@ -10,6 +10,7 @@ import com.dicoding.dermata.R
 import com.dicoding.dermata.databinding.ActivityResultBinding
 import com.dicoding.dermata.ui.ComingSoonPage.ComingSoonActivity
 import com.dicoding.dermata.ui.MainActivity
+import com.dicoding.dermata.ui.ProfileActivity.ProfileActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ResultActivity : AppCompatActivity() {
@@ -83,7 +84,14 @@ class ResultActivity : AppCompatActivity() {
                     overridePendingTransition(0, 0)
                     true
                 }
-                R.id.menu_profile, R.id.menu_aichat -> {
+                R.id.menu_profile -> {
+                    Log.d("MainActivity", "Redirecting to ProfileActivity")  // Log saat membuka ComingSoonActivity
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    overridePendingTransition(0, 0)
+                    true
+                }
+
+                R.id.menu_aichat -> {
                     Log.d("MainActivity", "Redirecting to ComingSoonActivity")  // Log saat membuka ComingSoonActivity
                     startActivity(Intent(this, ComingSoonActivity::class.java))
                     overridePendingTransition(0, 0)

@@ -142,7 +142,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.menu_profile -> {
-                    Log.d("MainActivity", "Redirecting to LogoutActivity")  // Log saat membuka ComingSoonActivity
+                    Log.d("MainActivity", "Redirecting to ProfileActivity")  // Log saat membuka ComingSoonActivity
                     startActivity(Intent(this,ProfileActivity::class.java))
                     overridePendingTransition(0, 0)
                     true

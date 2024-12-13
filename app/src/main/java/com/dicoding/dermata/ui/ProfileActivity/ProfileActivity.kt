@@ -79,6 +79,12 @@ class ProfileActivity : AppCompatActivity() {
                     overridePendingTransition(0, 0)
                     true
                 }
+                R.id.menu_home -> {
+                    Log.d("MainActivity", "Redirecting to MainActivity")  // Log saat membuka MainActivity
+                    startActivity(Intent(this, MainActivity::class.java))
+                    overridePendingTransition(0, 0)
+                    true
+                }
                 else -> false
             }
         }

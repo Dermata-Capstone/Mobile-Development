@@ -19,6 +19,7 @@ import com.dicoding.dermata.api.ApiClient
 import com.dicoding.dermata.databinding.ActivityAnalysisBinding
 import com.dicoding.dermata.ui.ComingSoonPage.ComingSoonActivity
 import com.dicoding.dermata.ui.MainActivity
+import com.dicoding.dermata.ui.ProfileActivity.ProfileActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.launch
 import okhttp3.MediaType.Companion.toMediaType
@@ -186,9 +187,15 @@ class AnalysisActivity : AppCompatActivity() {
                     }
                     true
                 }
-                R.id.menu_profile, R.id.menu_aichat -> {
+                 R.id.menu_aichat -> {
                     Log.d("MainActivity", "Redirecting to ComingSoonActivity")
                     startActivity(Intent(this, ComingSoonActivity::class.java))
+                    overridePendingTransition(0, 0)
+                    true
+                }
+                R.id.menu_profile -> {
+                    Log.d("MainActivity", "Redirecting to ProfileActivity")  // Log saat membuka ComingSoonActivity
+                    startActivity(Intent(this, ProfileActivity::class.java))
                     overridePendingTransition(0, 0)
                     true
                 }
