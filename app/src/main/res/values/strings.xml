@@ -87,6 +87,14 @@
         Rekomendasi: Gunakan produk dengan alpha arbutin untuk menghambat produksi melanin, vitamin C untuk mencerahkan,
         dan sunscreen untuk mencegah kerusakan lebih lanjut.
     </string>
+    
+    <string name="recommendation_eye_bags">
+    Kantung mata biasanya disebabkan oleh faktor-faktor seperti kurang tidur,
+        kelelahan, stres, atau penurunan elastisitas kulit seiring bertambahnya usia.
+        Untuk mengatasi hal ini, disarankan untuk menggunakan produk yang mengandung kafein,
+        peptida, atau asam hialuronat, yang dapat membantu mengurangi pembengkakan, meningkatkan
+        sirkulasi darah, dan melembapkan kulit di sekitar mata.
+    </string>
 
     <string name="recommendation_default">
         Rekomendasi tidak tersedia untuk jenis kulit ini. Silakan konsultasikan dengan dermatologis untuk saran lebih spesifik.

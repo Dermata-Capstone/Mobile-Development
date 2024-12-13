@@ -60,6 +60,7 @@ class ResultActivity : AppCompatActivity() {
             "Skin Redness" -> R.string.recommendation_skin_redness
             "Wrinkles" -> R.string.recommendation_wrinkles
             "Dark Spots" -> R.string.recommendation_dark_spots
+            "Eye Bags" -> R.string.recommendation_eye_bags
             else -> R.string.recommendation_default
         }
     }
